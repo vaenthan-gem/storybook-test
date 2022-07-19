@@ -1,0 +1,18 @@
+name: Build & Deploy Storybook
+on:
+  push:
+    branches:
+      - main
+    paths: [src/**"]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install and Build 🔧
+        # This needs an Access Token stored as "GH_TOKEN" 👇
+        run: |
+          npm install
+          npm run deploy-storybook -- --dry-run --out=docs/storybook-build
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
