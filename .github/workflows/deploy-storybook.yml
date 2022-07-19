@@ -14,10 +14,10 @@ jobs:
         # This needs an Access Token stored as "GH_TOKEN" 👇
         run: |
           npm install
-          npm run deploy-storybook -- --dry-run --out=docs/storybook-build
+          npm run deploy-storybook -- --dry-run --out=docs/storybook-build --ci
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Deploy 🚀
-        uses: actions/deploy-pages@v1
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
