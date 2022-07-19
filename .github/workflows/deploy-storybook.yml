@@ -18,5 +18,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Deploy 🚀
-        # This needs an Access Token stored as "GH_TOKEN" 👇
-      - uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v1
