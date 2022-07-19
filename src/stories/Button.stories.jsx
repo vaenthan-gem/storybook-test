@@ -19,7 +19,7 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   primary: true,
-  label: "WOW",
+  label: "Trying this again",
 };
 
 export const Secondary = Template.bind({});
