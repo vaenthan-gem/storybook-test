@@ -17,3 +17,6 @@ jobs:
           npm run deploy-storybook -- --dry-run --out=docs/storybook-build
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Deploy 🚀
+        # This needs an Access Token stored as "GH_TOKEN" 👇
+      - uses: actions/deploy-pages@v1
