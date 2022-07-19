@@ -19,3 +19,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Deploy 🚀
         uses: actions/deploy-pages@v1
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
